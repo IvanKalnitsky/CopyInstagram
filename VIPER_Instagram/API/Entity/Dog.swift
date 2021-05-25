@@ -7,6 +7,11 @@
 
 import Foundation
 
-class Model {
-    static let numeration = [101,102,103,104,105,106,107,108,109,110]
+import Foundation
+
+
+// MARK: - Dog
+struct Dog: Codable {
+    let message: String
+    let status: String
 }
