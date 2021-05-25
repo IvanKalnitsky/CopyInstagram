@@ -2,14 +2,14 @@
 
 import UIKit
 
-protocol InteractorProtocol: AnyObject {
+protocol FeedInteractorProtocol: AnyObject {
     func fetchPhotos(number: Int)
 }
 
 
-class FeedInteractor: InteractorProtocol {
+class FeedInteractor: FeedInteractorProtocol {
     
-    weak var presenter: PresenterProtocol?
+    weak var presenter: FeedPresenterProtocol?
     
     var photoDownloaded = [String]()
     

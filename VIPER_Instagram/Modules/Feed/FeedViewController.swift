@@ -4,23 +4,23 @@ import UIKit
 //import SnapKit
 import AVFoundation
 
-protocol ViewProtocol: AnyObject {
+protocol FeedViewProtocol: AnyObject {
     func showDownloadedPhotos(photos: [String])
 }
 
-class FeedViewController: UIViewController, ViewProtocol {
+class FeedViewController: UIViewController, FeedViewProtocol {
     
     private var photos = [String]()
     
     private let defaultFhoto = UIImage(named: "default")
     
-    let presenter: PresenterProtocol
+    let presenter: FeedPresenterProtocol
     
     //MARK: PaginatorProperties
     private var targetCellNumber = 0
     private let numberOfPostsToAdd = 1
     
-    init(presenter: PresenterProtocol) {
+    init(presenter: FeedPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }

@@ -1,18 +1,18 @@
 
 import UIKit
-protocol PresenterProtocol: AnyObject {
-    var interactor: InteractorProtocol { get }
+protocol FeedPresenterProtocol: AnyObject {
+    var interactor: FeedInteractorProtocol { get }
     func addPhotos(number: Int)
     func fetchPhotos(photos: [String])
 }
 
-class FeedPresenter: PresenterProtocol {
+class FeedPresenter: FeedPresenterProtocol {
   
-    weak var view: ViewProtocol?
+    weak var view: FeedViewProtocol?
     
-    let interactor: InteractorProtocol
+    let interactor: FeedInteractorProtocol
 
-    init(interactor: InteractorProtocol) {
+    init(interactor: FeedInteractorProtocol) {
         self.interactor = interactor
     }
     

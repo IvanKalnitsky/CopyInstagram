@@ -5,4 +5,16 @@
 //  Created by macbookp on 25.05.2021.
 //
 
-import Foundation
+import UIKit
+
+class TabBarModuleBuilder {
+    
+    static func build(submodules: TabBarRouter.Submodules) -> UITabBarController {
+        
+        let tabs = TabBarRouter.tabs(submodules: submodules)
+        let viewController = TabBarViewController(tabs: tabs)
+        
+        return viewController
+        
+    }
+}

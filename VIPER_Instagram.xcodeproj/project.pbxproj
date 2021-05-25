@@ -8,33 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		6D44B19AE48A30D0048427F2 /* Pods_VIPER_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DEA007B85A16ED9026E3A1 /* Pods_VIPER_Instagram.framework */; };
+		821C6A44265BF1C80037FCF6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A43265BF1C80037FCF6 /* APIManager.swift */; };
+		821C6A47265CF7930037FCF6 /* Extension UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A46265CF7930037FCF6 /* Extension UIImage.swift */; };
+		821C6A51265D5A920037FCF6 /* ProfileModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A4E265D5A920037FCF6 /* ProfileModuleBuilder.swift */; };
+		821C6A52265D5A920037FCF6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A50265D5A920037FCF6 /* ProfileViewController.swift */; };
+		821C6A53265D5A920037FCF6 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A4F265D5A920037FCF6 /* ProfileInteractor.swift */; };
+		821C6A54265D5A920037FCF6 /* ProfileModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A4C265D5A920037FCF6 /* ProfileModuleRouter.swift */; };
+		821C6A55265D5A920037FCF6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A4D265D5A920037FCF6 /* ProfilePresenter.swift */; };
+		821C6A58265D5FDA0037FCF6 /* TabBarModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A57265D5FDA0037FCF6 /* TabBarModuleBuilder.swift */; };
+		821C6A5A265D5FFE0037FCF6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A59265D5FFE0037FCF6 /* TabBarViewController.swift */; };
+		821C6A5C265D601E0037FCF6 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A5B265D601E0037FCF6 /* TabBarRouter.swift */; };
 		82B2683E264D390100837776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2683D264D390100837776 /* AppDelegate.swift */; };
 		82B26840264D390100837776 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2683F264D390100837776 /* SceneDelegate.swift */; };
 		82B26847264D390500837776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B26846264D390500837776 /* Assets.xcassets */; };
 		82B2684A264D390500837776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B26848264D390500837776 /* LaunchScreen.storyboard */; };
-		82B2685A264D3A0200837776 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B26855264D3A0200837776 /* Interactor.swift */; };
-		82B2685B264D3A0200837776 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B26856264D3A0200837776 /* ModuleBuilder.swift */; };
-		82B2685C264D3A0200837776 /* ModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B26857264D3A0200837776 /* ModuleRouter.swift */; };
-		82B2685D264D3A0200837776 /* ModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B26858264D3A0200837776 /* ModuleViewController.swift */; };
-		82B2685E264D3A0200837776 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B26859264D3A0200837776 /* Presenter.swift */; };
-		82B26860264D5D0800837776 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2685F264D5D0800837776 /* Model.swift */; };
+		82B2685A264D3A0200837776 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B26855264D3A0200837776 /* FeedInteractor.swift */; };
+		82B2685B264D3A0200837776 /* FeedModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B26856264D3A0200837776 /* FeedModuleBuilder.swift */; };
+		82B2685C264D3A0200837776 /* FeedModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B26857264D3A0200837776 /* FeedModuleRouter.swift */; };
+		82B2685D264D3A0200837776 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B26858264D3A0200837776 /* FeedViewController.swift */; };
+		82B2685E264D3A0200837776 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B26859264D3A0200837776 /* FeedPresenter.swift */; };
+		82B26860264D5D0800837776 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2685F264D5D0800837776 /* Dog.swift */; };
 		82F057B5264E9EAB00D747E2 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F057B4264E9EAB00D747E2 /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		23DEA007B85A16ED9026E3A1 /* Pods_VIPER_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		821C6A43265BF1C80037FCF6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		821C6A46265CF7930037FCF6 /* Extension UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIImage.swift"; sourceTree = "<group>"; };
+		821C6A4C265D5A920037FCF6 /* ProfileModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleRouter.swift; sourceTree = "<group>"; };
+		821C6A4D265D5A920037FCF6 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		821C6A4E265D5A920037FCF6 /* ProfileModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleBuilder.swift; sourceTree = "<group>"; };
+		821C6A4F265D5A920037FCF6 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		821C6A50265D5A920037FCF6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		821C6A57265D5FDA0037FCF6 /* TabBarModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleBuilder.swift; sourceTree = "<group>"; };
+		821C6A59265D5FFE0037FCF6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		821C6A5B265D601E0037FCF6 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		82B2683A264D390100837776 /* VIPER_Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER_Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B2683D264D390100837776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B2683F264D390100837776 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		82B26846264D390500837776 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82B26849264D390500837776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82B2684B264D390500837776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82B26855264D3A0200837776 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
-		82B26856264D3A0200837776 /* ModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
-		82B26857264D3A0200837776 /* ModuleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleRouter.swift; sourceTree = "<group>"; };
-		82B26858264D3A0200837776 /* ModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleViewController.swift; sourceTree = "<group>"; };
-		82B26859264D3A0200837776 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		82B2685F264D5D0800837776 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		82B26855264D3A0200837776 /* FeedInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
+		82B26856264D3A0200837776 /* FeedModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedModuleBuilder.swift; sourceTree = "<group>"; };
+		82B26857264D3A0200837776 /* FeedModuleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedModuleRouter.swift; sourceTree = "<group>"; };
+		82B26858264D3A0200837776 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		82B26859264D3A0200837776 /* FeedPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		82B2685F264D5D0800837776 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		82F057B4264E9EAB00D747E2 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		87CE4A5365CCE0ECD7DA88CE /* Pods-VIPER_Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER_Instagram.debug.xcconfig"; path = "Target Support Files/Pods-VIPER_Instagram/Pods-VIPER_Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB9A3F1D6C213757206EF07 /* Pods-VIPER_Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER_Instagram.release.xcconfig"; path = "Target Support Files/Pods-VIPER_Instagram/Pods-VIPER_Instagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +72,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		821C6A40265BD9910037FCF6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				821C6A42265BF1AF0037FCF6 /* Services */,
+				821C6A41265BDA6E0037FCF6 /* Entity */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		821C6A41265BDA6E0037FCF6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				82B2685F264D5D0800837776 /* Dog.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		821C6A42265BF1AF0037FCF6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				821C6A43265BF1C80037FCF6 /* APIManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		821C6A45265CF76B0037FCF6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				821C6A46265CF7930037FCF6 /* Extension UIImage.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		821C6A48265D5A300037FCF6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				821C6A56265D5FC70037FCF6 /* TabBar */,
+				821C6A49265D5A6B0037FCF6 /* Profile */,
+				82B26854264D39C400837776 /* Feed */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		821C6A49265D5A6B0037FCF6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				821C6A50265D5A920037FCF6 /* ProfileViewController.swift */,
+				821C6A4D265D5A920037FCF6 /* ProfilePresenter.swift */,
+				821C6A4F265D5A920037FCF6 /* ProfileInteractor.swift */,
+				821C6A4E265D5A920037FCF6 /* ProfileModuleBuilder.swift */,
+				821C6A4C265D5A920037FCF6 /* ProfileModuleRouter.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		821C6A56265D5FC70037FCF6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				821C6A57265D5FDA0037FCF6 /* TabBarModuleBuilder.swift */,
+				821C6A59265D5FFE0037FCF6 /* TabBarViewController.swift */,
+				821C6A5B265D601E0037FCF6 /* TabBarRouter.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		82B26831264D390100837776 = {
 			isa = PBXGroup;
 			children = (
@@ -73,10 +158,11 @@
 		82B2683C264D390100837776 /* VIPER_Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				821C6A45265CF76B0037FCF6 /* Extension */,
+				821C6A40265BD9910037FCF6 /* API */,
 				82F057B6264E9EB500D747E2 /* Views */,
 				82B26851264D396C00837776 /* Application */,
-				82B2685F264D5D0800837776 /* Model.swift */,
-				82B26854264D39C400837776 /* Lenta */,
+				821C6A48265D5A300037FCF6 /* Modules */,
 				82B26846264D390500837776 /* Assets.xcassets */,
 				82B26848264D390500837776 /* LaunchScreen.storyboard */,
 				82B2684B264D390500837776 /* Info.plist */,
@@ -93,16 +179,16 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		82B26854264D39C400837776 /* Lenta */ = {
+		82B26854264D39C400837776 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				82B26858264D3A0200837776 /* ModuleViewController.swift */,
-				82B26859264D3A0200837776 /* Presenter.swift */,
-				82B26855264D3A0200837776 /* Interactor.swift */,
-				82B26856264D3A0200837776 /* ModuleBuilder.swift */,
-				82B26857264D3A0200837776 /* ModuleRouter.swift */,
+				82B26858264D3A0200837776 /* FeedViewController.swift */,
+				82B26859264D3A0200837776 /* FeedPresenter.swift */,
+				82B26855264D3A0200837776 /* FeedInteractor.swift */,
+				82B26856264D3A0200837776 /* FeedModuleBuilder.swift */,
+				82B26857264D3A0200837776 /* FeedModuleRouter.swift */,
 			);
-			path = Lenta;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		82F057B6264E9EB500D747E2 /* Views */ = {
@@ -243,15 +329,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82B26860264D5D0800837776 /* Model.swift in Sources */,
+				82B26860264D5D0800837776 /* Dog.swift in Sources */,
 				82B2683E264D390100837776 /* AppDelegate.swift in Sources */,
-				82B2685E264D3A0200837776 /* Presenter.swift in Sources */,
-				82B2685D264D3A0200837776 /* ModuleViewController.swift in Sources */,
-				82B2685A264D3A0200837776 /* Interactor.swift in Sources */,
-				82B2685B264D3A0200837776 /* ModuleBuilder.swift in Sources */,
-				82B2685C264D3A0200837776 /* ModuleRouter.swift in Sources */,
+				821C6A55265D5A920037FCF6 /* ProfilePresenter.swift in Sources */,
+				821C6A44265BF1C80037FCF6 /* APIManager.swift in Sources */,
+				821C6A5A265D5FFE0037FCF6 /* TabBarViewController.swift in Sources */,
+				821C6A58265D5FDA0037FCF6 /* TabBarModuleBuilder.swift in Sources */,
+				82B2685E264D3A0200837776 /* FeedPresenter.swift in Sources */,
+				82B2685D264D3A0200837776 /* FeedViewController.swift in Sources */,
+				821C6A52265D5A920037FCF6 /* ProfileViewController.swift in Sources */,
+				82B2685A264D3A0200837776 /* FeedInteractor.swift in Sources */,
+				82B2685B264D3A0200837776 /* FeedModuleBuilder.swift in Sources */,
+				821C6A47265CF7930037FCF6 /* Extension UIImage.swift in Sources */,
+				82B2685C264D3A0200837776 /* FeedModuleRouter.swift in Sources */,
+				821C6A54265D5A920037FCF6 /* ProfileModuleRouter.swift in Sources */,
+				821C6A5C265D601E0037FCF6 /* TabBarRouter.swift in Sources */,
 				82F057B5264E9EAB00D747E2 /* FeedTableViewCell.swift in Sources */,
 				82B26840264D390100837776 /* SceneDelegate.swift in Sources */,
+				821C6A53265D5A920037FCF6 /* ProfileInteractor.swift in Sources */,
+				821C6A51265D5A920037FCF6 /* ProfileModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5C93MBV7Q;
 				INFOPLIST_FILE = VIPER_Instagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,7 +498,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Ivan.VIPER-Instagram";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -414,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5C93MBV7Q;
 				INFOPLIST_FILE = VIPER_Instagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,7 +519,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Ivan.VIPER-Instagram";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

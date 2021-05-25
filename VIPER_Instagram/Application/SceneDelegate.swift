@@ -19,7 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ModuleBuilder.build()
+        let subModules = (FeedModuleBuilder.build(),ProfileModuleBuilder.build())
+        
+        let tabBarController = TabBarModuleBuilder.build(submodules: subModules)
+        
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
     }

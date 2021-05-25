@@ -3,8 +3,8 @@
 import Foundation
 
 
-//protocol ModuleRouterProtocol: BaseRouterProtocol {
+//protocol ProfileModuleRouterProtocol: BaseRouterProtocol {
 //}
 //
-//class ModuleRouter: BaseRouter<ModuleViewController>, ModuleRouterProtocol {
+//class ProfileModuleRouter: BaseRouter<ModuleViewController>, ProfileModuleRouterProtocol {
 //}
