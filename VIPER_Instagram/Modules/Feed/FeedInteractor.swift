@@ -3,7 +3,7 @@
 import UIKit
 
 protocol FeedInteractorProtocol: AnyObject {
-    func fetchPhotos(number: Int)
+    func getPosts()
 }
 
 
@@ -11,18 +11,23 @@ class FeedInteractor: FeedInteractorProtocol {
     
     weak var presenter: FeedPresenterProtocol?
     
-    var photoDownloaded = [String]()
-    
-    
-    func fetchPhotos(number: Int) {
-        var newPhoto = [String]()
-        ApiManager.shared.getDogs { dog in
-            print(dog.message)
-            newPhoto.append(dog.message)
-            print("DownloadedPhoto in COMPLETION  =  \(newPhoto.count)")
-            DispatchQueue.main.async {
-                self.presenter?.fetchPhotos(photos: newPhoto)
-            }
+    func getPosts() {
+        FeeedManager.shared.getDogs { posts in
+                self.presenter?.fetchPhotos(posts: posts)
+            print("posts in GET POSTS INTERACTOR = \(posts.count)")
         }
     }
 }
+//
+//    func getPosts() {
+//        var newPhoto = [String]()
+//        ApiManager.shared.getDogs { dog in
+//            print(dog.message)
+//            newPhoto.append(dog.message)
+//            print("DownloadedPhoto in COMPLETION  =  \(newPhoto.count)")
+//            DispatchQueue.main.async {
+//                self.presenter?.fetchPhotos(photos: newPhoto)
+//            }
+//        }
+//    }
+

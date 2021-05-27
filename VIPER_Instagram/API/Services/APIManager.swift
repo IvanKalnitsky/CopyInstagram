@@ -7,6 +7,8 @@
 
 import Foundation
 
+import UIKit
+
 class ApiManager {
     
     static let shared = ApiManager()
@@ -21,5 +23,18 @@ class ApiManager {
             } 
         }
         task.resume()
+    }
+    
+    func getImage(from string: String, completion: @escaping (UIImage?) -> Void) {
+        guard let url = URL(string: string) else { return }
+        var image: UIImage? = nil
+        do {
+            let data = try Data(contentsOf: url, options: [])
+            image = UIImage(data: data)
+            completion(image)
+        }
+        catch {
+            completion(nil)
+        }
     }
 }

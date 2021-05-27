@@ -18,6 +18,9 @@
 		821C6A58265D5FDA0037FCF6 /* TabBarModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A57265D5FDA0037FCF6 /* TabBarModuleBuilder.swift */; };
 		821C6A5A265D5FFE0037FCF6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A59265D5FFE0037FCF6 /* TabBarViewController.swift */; };
 		821C6A5C265D601E0037FCF6 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A5B265D601E0037FCF6 /* TabBarRouter.swift */; };
+		821C6A5F265E3AE80037FCF6 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A5E265E3AE80037FCF6 /* FeedManager.swift */; };
+		821C6A61265E3B0D0037FCF6 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A60265E3B0D0037FCF6 /* DataBaseManager.swift */; };
+		821C6A63265E3C230037FCF6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A62265E3C230037FCF6 /* Reachability.swift */; };
 		82B2683E264D390100837776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2683D264D390100837776 /* AppDelegate.swift */; };
 		82B26840264D390100837776 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2683F264D390100837776 /* SceneDelegate.swift */; };
 		82B26847264D390500837776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B26846264D390500837776 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 		821C6A57265D5FDA0037FCF6 /* TabBarModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleBuilder.swift; sourceTree = "<group>"; };
 		821C6A59265D5FFE0037FCF6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		821C6A5B265D601E0037FCF6 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		821C6A5E265E3AE80037FCF6 /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
+		821C6A60265E3B0D0037FCF6 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		821C6A62265E3C230037FCF6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		82B2683A264D390100837776 /* VIPER_Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER_Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B2683D264D390100837776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B2683F264D390100837776 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				821C6A43265BF1C80037FCF6 /* APIManager.swift */,
+				821C6A60265E3B0D0037FCF6 /* DataBaseManager.swift */,
+				821C6A62265E3C230037FCF6 /* Reachability.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -137,6 +145,14 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		821C6A5D265E3AD70037FCF6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				821C6A5E265E3AE80037FCF6 /* FeedManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		82B26831264D390100837776 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +174,7 @@
 		82B2683C264D390100837776 /* VIPER_Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				821C6A5D265E3AD70037FCF6 /* Managers */,
 				821C6A45265CF76B0037FCF6 /* Extension */,
 				821C6A40265BD9910037FCF6 /* API */,
 				82F057B6264E9EB500D747E2 /* Views */,
@@ -333,6 +350,7 @@
 				82B2683E264D390100837776 /* AppDelegate.swift in Sources */,
 				821C6A55265D5A920037FCF6 /* ProfilePresenter.swift in Sources */,
 				821C6A44265BF1C80037FCF6 /* APIManager.swift in Sources */,
+				821C6A61265E3B0D0037FCF6 /* DataBaseManager.swift in Sources */,
 				821C6A5A265D5FFE0037FCF6 /* TabBarViewController.swift in Sources */,
 				821C6A58265D5FDA0037FCF6 /* TabBarModuleBuilder.swift in Sources */,
 				82B2685E264D3A0200837776 /* FeedPresenter.swift in Sources */,
@@ -340,11 +358,13 @@
 				821C6A52265D5A920037FCF6 /* ProfileViewController.swift in Sources */,
 				82B2685A264D3A0200837776 /* FeedInteractor.swift in Sources */,
 				82B2685B264D3A0200837776 /* FeedModuleBuilder.swift in Sources */,
+				821C6A5F265E3AE80037FCF6 /* FeedManager.swift in Sources */,
 				821C6A47265CF7930037FCF6 /* Extension UIImage.swift in Sources */,
 				82B2685C264D3A0200837776 /* FeedModuleRouter.swift in Sources */,
 				821C6A54265D5A920037FCF6 /* ProfileModuleRouter.swift in Sources */,
 				821C6A5C265D601E0037FCF6 /* TabBarRouter.swift in Sources */,
 				82F057B5264E9EAB00D747E2 /* FeedTableViewCell.swift in Sources */,
+				821C6A63265E3C230037FCF6 /* Reachability.swift in Sources */,
 				82B26840264D390100837776 /* SceneDelegate.swift in Sources */,
 				821C6A53265D5A920037FCF6 /* ProfileInteractor.swift in Sources */,
 				821C6A51265D5A920037FCF6 /* ProfileModuleBuilder.swift in Sources */,

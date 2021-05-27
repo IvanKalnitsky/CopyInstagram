@@ -7,11 +7,16 @@
 
 import Foundation
 
-import Foundation
+import UIKit
 
 
 // MARK: - Dog
 struct Dog: Codable {
     let message: String
     let status: String
+}
+
+struct Post {
+    let dog: Dog
+    let image: UIImage?
 }

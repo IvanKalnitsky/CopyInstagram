@@ -2,8 +2,8 @@
 import UIKit
 protocol FeedPresenterProtocol: AnyObject {
     var interactor: FeedInteractorProtocol { get }
-    func addPhotos(number: Int)
-    func fetchPhotos(photos: [String])
+    func addPhotos()
+    func fetchPhotos(posts: [Post])
 }
 
 class FeedPresenter: FeedPresenterProtocol {
@@ -17,15 +17,15 @@ class FeedPresenter: FeedPresenterProtocol {
     }
     
     // FROM VIEW
-    func addPhotos(number: Int) {
-        interactor.fetchPhotos(number: number)
+    func addPhotos() {
+        interactor.getPosts()
         print("In Presentor --- addPhotos")
     }
     
     // TO VIEW
-    func fetchPhotos(photos: [String]) {
-        view?.showDownloadedPhotos(photos: photos)
-        print("In Presentor --- fetchPhotos - command view.showdowloaded... photosCount = \(photos.count)")
+    func fetchPhotos(posts: [Post]) {
+        view?.showDownloadedPosts(posts: posts)
+        print("In Presentor --- fetchPhotos - command view.showdowloaded... photosCount = \(posts.count)")
     }
 
 }

@@ -25,7 +25,8 @@ class FeedTableViewCell: UITableViewCell {
     private let photoImage: UIImageView = {
         var imageView = UIImageView()
         imageView.backgroundColor = .white
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -91,6 +92,7 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     func initialize() {
+        //TOPVIEW
         addSubview(topView)
         topView.snp.makeConstraints { maker in
             maker.left.top.right.equalToSuperview()
@@ -116,19 +118,20 @@ class FeedTableViewCell: UITableViewCell {
             maker.height.width.equalTo(25)
         }
         
+        //BottomView
+        addSubview(bottomView)
+        bottomView.snp.makeConstraints { maker in
+            maker.left.right.equalToSuperview()
+            maker.height.equalTo(100)
+            maker.bottom.equalToSuperview()
+        }
+        
+        //PHOTOIMAGE
         addSubview(photoImage)
         photoImage.snp.makeConstraints { maker in
             maker.top.equalTo(topView.snp.bottom)
             maker.left.right.equalToSuperview()
-            maker.height.equalTo(UIScreen.main.bounds.width * 1.2)
-        }
-        
-        addSubview(bottomView)
-        bottomView.snp.makeConstraints { maker in
-            maker.left.right.equalToSuperview()
-            maker.top.equalTo(photoImage.snp.bottom)
-            maker.height.equalTo(100)
-            maker.bottom.equalToSuperview()
+            maker.bottom.equalTo(bottomView.snp.top)
         }
         
         bottomView.addSubview(lmdStackView)
@@ -153,21 +156,6 @@ class FeedTableViewCell: UITableViewCell {
         
     }
     
-    func getImage(from string: String) {
-    guard let url = URL(string: string) else {
-        print("Unable to create URL")
-        return
-    }
-    var image: UIImage? = nil
-    do {
-        let data = try Data(contentsOf: url, options: [])
-        image = UIImage(data: data)
-        photoImage.image = image
-    }
-    catch {
-        print(error.localizedDescription)
-    }
-}
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
