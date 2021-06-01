@@ -16,18 +16,17 @@ class FeedTableViewCell: UITableViewCell {
         return view
     }()
     
+    private let photoImage: UIImageView = {
+        var imageView = UIImageView()
+        imageView.backgroundColor = .gray
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
     private let bottomView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         return view
-    }()
-    
-    private let photoImage: UIImageView = {
-        var imageView = UIImageView()
-        imageView.backgroundColor = .white
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.masksToBounds = true
-        return imageView
     }()
     
     private let avatarProfileButton: UIButton = {
@@ -98,7 +97,7 @@ class FeedTableViewCell: UITableViewCell {
             maker.left.top.right.equalToSuperview()
             maker.height.equalTo(70)
         }
-        
+
         topView.addSubview(avatarProfileButton)
         avatarProfileButton.snp.makeConstraints { maker in
             maker.centerY.equalToSuperview()
@@ -110,30 +109,31 @@ class FeedTableViewCell: UITableViewCell {
             maker.left.equalTo(avatarProfileButton.snp.right).inset(-10)
             maker.centerY.equalTo(avatarProfileButton)
         }
-        
+
         topView.addSubview(optionImageButton)
         optionImageButton.snp.makeConstraints { maker in
             maker.right.equalToSuperview().inset(20)
             maker.centerY.equalToSuperview()
             maker.height.width.equalTo(25)
         }
-        
+
+        //PHOTOIMAGE
+        addSubview(photoImage)
+        photoImage.snp.makeConstraints { maker in
+//            maker.top.equalTo(topView.snp.bottom)
+            maker.height.equalTo(500)
+            maker.top.bottom.left.right.equalToSuperview()
+        }
+
         //BottomView
         addSubview(bottomView)
         bottomView.snp.makeConstraints { maker in
+            maker.top.equalTo(photoImage.snp.bottom)
             maker.left.right.equalToSuperview()
             maker.height.equalTo(100)
             maker.bottom.equalToSuperview()
         }
-        
-        //PHOTOIMAGE
-        addSubview(photoImage)
-        photoImage.snp.makeConstraints { maker in
-            maker.top.equalTo(topView.snp.bottom)
-            maker.left.right.equalToSuperview()
-            maker.bottom.equalTo(bottomView.snp.top)
-        }
-        
+
         bottomView.addSubview(lmdStackView)
         lmdStackView.snp.makeConstraints { maker in
             maker.left.equalTo(15)
@@ -141,7 +141,7 @@ class FeedTableViewCell: UITableViewCell {
             maker.height.equalTo(30)
             maker.width.equalTo(110)
         }
-        
+
         bottomView.addSubview(bookmarkButton)
         bookmarkButton.snp.makeConstraints { maker in
             maker.centerY.equalTo(lmdStackView.snp.centerY)
@@ -153,7 +153,7 @@ class FeedTableViewCell: UITableViewCell {
             maker.left.equalTo(lmdStackView.snp.left)
             maker.top.equalTo(lmdStackView.snp.bottom).inset(-10)
         }
-        
+
     }
     
     required init?(coder: NSCoder) {

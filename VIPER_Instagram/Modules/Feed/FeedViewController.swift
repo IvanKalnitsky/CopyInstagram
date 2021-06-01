@@ -18,12 +18,11 @@ class FeedViewController: UIViewController, FeedViewProtocol {
     
     private let defaultFhoto = UIImage(named: "default")
     
-    let presenter: FeedPresenterProtocol
-    
     //MARK: PaginatorProperties
     private var targetCellNumber = 8
-
     
+    let presenter: FeedPresenterProtocol
+   
     init(presenter: FeedPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -100,6 +99,7 @@ class FeedViewController: UIViewController, FeedViewProtocol {
         feedTableView.dataSource = self
         feedTableView.delegate = self
         feedTableView.register(FeedTableViewCell.self, forCellReuseIdentifier: "cell")
+//        feedTableView.register(TestTableViewCell.self, forCellReuseIdentifier: "cell")
        
     }
     

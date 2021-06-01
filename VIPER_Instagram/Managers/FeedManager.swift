@@ -31,20 +31,22 @@ class FeeedManager {
         let imageGroup = DispatchGroup()
         group.notify(queue: .main) {
             print("DogsCount in GetDogs = \(dogs.count)")
-            dogs.forEach { dog in
+            for dog in dogs {
                 imageGroup.enter()
                 ApiManager.shared.getImage(from: dog.message) { image in
                     print("Image in GetDogs = \(String(describing: image))")
                     let post = Post(dog: dog, image: image)
                     posts.append(post)
+                    print("PostsCOunt In GetDogs = \(posts.count)")
                     imageGroup.leave()
                 }
             }
+            imageGroup.notify(queue: .main) {
+                completion(posts)
+                print("Posts in COMLETION BLOCK IN GETDOGS = \(posts.count)")
+            }
         }
-        imageGroup.notify(queue: .main) {
-            completion(posts)
-            print("Posts in COMLETION BLOCK IN GETDOGS = \(posts.count)")
-        }
+    
     }
     
     // Проверка на наличие интернета

@@ -18,16 +18,5 @@ class FeedInteractor: FeedInteractorProtocol {
         }
     }
 }
-//
-//    func getPosts() {
-//        var newPhoto = [String]()
-//        ApiManager.shared.getDogs { dog in
-//            print(dog.message)
-//            newPhoto.append(dog.message)
-//            print("DownloadedPhoto in COMPLETION  =  \(newPhoto.count)")
-//            DispatchQueue.main.async {
-//                self.presenter?.fetchPhotos(photos: newPhoto)
-//            }
-//        }
-//    }
+
 
