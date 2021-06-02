@@ -19,7 +19,7 @@ class FeedViewController: UIViewController, FeedViewProtocol {
     private let defaultFhoto = UIImage(named: "default")
     
     //MARK: PaginatorProperties
-    private var targetCellNumber = 8
+    private var targetCellNumber = 7
     
     let presenter: FeedPresenterProtocol
    
@@ -99,14 +99,13 @@ class FeedViewController: UIViewController, FeedViewProtocol {
         feedTableView.dataSource = self
         feedTableView.delegate = self
         feedTableView.register(FeedTableViewCell.self, forCellReuseIdentifier: "cell")
-//        feedTableView.register(TestTableViewCell.self, forCellReuseIdentifier: "cell")
-       
+        feedTableView.showsVerticalScrollIndicator = false
+        feedTableView.separatorStyle = .none
     }
     
     func showDownloadedPosts(posts: [Post]) {
       print("In View --- photosCount = \(posts.count)")
         self.posts += posts
-//        feedTableView.reloadData()
     }
     
 }
@@ -121,7 +120,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = feedTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
-        cell.imageView?.image = posts[indexPath.row].image
+        cell.setNewImage(image: posts[indexPath.row].image!) 
         return cell
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -136,8 +135,8 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         return UIView()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        670
-    }
-    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        670
+//    }
+//
 }

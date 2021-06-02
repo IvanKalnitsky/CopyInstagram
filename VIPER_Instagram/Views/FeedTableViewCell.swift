@@ -20,6 +20,7 @@ class FeedTableViewCell: UITableViewCell {
         var imageView = UIImageView()
         imageView.backgroundColor = .gray
         imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -90,7 +91,20 @@ class FeedTableViewCell: UITableViewCell {
         initialize()
     }
     
-    func initialize() {
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+//    override func prepareForReuse() {
+//        super.prepareForReuse()
+//        photoImage.image = nil
+//    }
+    
+    func setNewImage(image: UIImage) {
+        self.photoImage.image = image
+    }
+    
+   private func initialize() {
         //TOPVIEW
         addSubview(topView)
         topView.snp.makeConstraints { maker in
@@ -120,9 +134,9 @@ class FeedTableViewCell: UITableViewCell {
         //PHOTOIMAGE
         addSubview(photoImage)
         photoImage.snp.makeConstraints { maker in
-//            maker.top.equalTo(topView.snp.bottom)
+            maker.top.equalTo(topView.snp.bottom)
             maker.height.equalTo(500)
-            maker.top.bottom.left.right.equalToSuperview()
+            maker.left.right.equalToSuperview()
         }
 
         //BottomView
@@ -153,10 +167,6 @@ class FeedTableViewCell: UITableViewCell {
             maker.left.equalTo(lmdStackView.snp.left)
             maker.top.equalTo(lmdStackView.snp.bottom).inset(-10)
         }
-
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+   
 }

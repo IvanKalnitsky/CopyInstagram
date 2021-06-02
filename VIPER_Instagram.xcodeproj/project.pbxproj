@@ -21,8 +21,6 @@
 		821C6A5F265E3AE80037FCF6 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A5E265E3AE80037FCF6 /* FeedManager.swift */; };
 		821C6A61265E3B0D0037FCF6 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A60265E3B0D0037FCF6 /* DataBaseManager.swift */; };
 		821C6A63265E3C230037FCF6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A62265E3C230037FCF6 /* Reachability.swift */; };
-		821C6A6626669FB80037FCF6 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6A6426669FB80037FCF6 /* TestTableViewCell.swift */; };
-		821C6A6726669FB80037FCF6 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821C6A6526669FB80037FCF6 /* TestTableViewCell.xib */; };
 		82B2683E264D390100837776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2683D264D390100837776 /* AppDelegate.swift */; };
 		82B26840264D390100837776 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2683F264D390100837776 /* SceneDelegate.swift */; };
 		82B26847264D390500837776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B26846264D390500837776 /* Assets.xcassets */; };
@@ -51,8 +49,6 @@
 		821C6A5E265E3AE80037FCF6 /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		821C6A60265E3B0D0037FCF6 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		821C6A62265E3C230037FCF6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		821C6A6426669FB80037FCF6 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
-		821C6A6526669FB80037FCF6 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		82B2683A264D390100837776 /* VIPER_Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER_Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B2683D264D390100837776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B2683F264D390100837776 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,8 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				82F057B4264E9EAB00D747E2 /* FeedTableViewCell.swift */,
-				821C6A6426669FB80037FCF6 /* TestTableViewCell.swift */,
-				821C6A6526669FB80037FCF6 /* TestTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,7 +292,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				821C6A6726669FB80037FCF6 /* TestTableViewCell.xib in Resources */,
 				82B2684A264D390500837776 /* LaunchScreen.storyboard in Resources */,
 				82B26847264D390500837776 /* Assets.xcassets in Resources */,
 			);
@@ -373,7 +366,6 @@
 				82F057B5264E9EAB00D747E2 /* FeedTableViewCell.swift in Sources */,
 				821C6A63265E3C230037FCF6 /* Reachability.swift in Sources */,
 				82B26840264D390100837776 /* SceneDelegate.swift in Sources */,
-				821C6A6626669FB80037FCF6 /* TestTableViewCell.swift in Sources */,
 				821C6A53265D5A920037FCF6 /* ProfileInteractor.swift in Sources */,
 				821C6A51265D5A920037FCF6 /* ProfileModuleBuilder.swift in Sources */,
 			);
