@@ -1,8 +1,7 @@
 
-
-import UIKit
-//import SnapKit
 import AVFoundation
+import SnapKit
+import UIKit
 
 protocol FeedViewProtocol: AnyObject {
     func showDownloadedPosts(posts: [Post])
@@ -18,22 +17,9 @@ class FeedViewController: UIViewController, FeedViewProtocol {
     
     private let defaultFhoto = UIImage(named: "default")
     
-    //MARK: PaginatorProperties
     private var targetCellNumber = 7
     
-    let presenter: FeedPresenterProtocol
-   
-    init(presenter: FeedPresenterProtocol) {
-        self.presenter = presenter
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("don't use storyboards!")
-    }
-    
     //MARK: CreateViews
-    
     private var feedTableView = UITableView()
     
     private var topView: UIView = {
@@ -55,16 +41,25 @@ class FeedViewController: UIViewController, FeedViewProtocol {
         button.layer.masksToBounds = true
         return button
     }()
-        
-
+    
+    let presenter: FeedPresenterProtocol
+    
+    init(presenter: FeedPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("don't use storyboards!")
+    }
+    
     //MARK: Methods
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.addPhotos()
+        presenter.needPosts()
         initialize()
     }
-
+    
     private func initialize() {
         self.view.backgroundColor = .white
         //MARK: - SetupTopView
@@ -104,7 +99,6 @@ class FeedViewController: UIViewController, FeedViewProtocol {
     }
     
     func showDownloadedPosts(posts: [Post]) {
-      print("In View --- photosCount = \(posts.count)")
         self.posts += posts
     }
     
@@ -114,29 +108,23 @@ class FeedViewController: UIViewController, FeedViewProtocol {
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("TableView --- photosCount = \(posts.count)")
-       return posts.count
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = feedTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
-        cell.setNewImage(image: posts[indexPath.row].image!) 
+        cell.configure(post: posts[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let indexPathForInsertionNewRows = IndexPath(row: targetCellNumber, section: 0)
         if indexPath == indexPathForInsertionNewRows {
-        targetCellNumber += 10
-        presenter.addPhotos()
+            targetCellNumber += 10
+            presenter.needPosts()
         }
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        670
-//    }
-//
 }

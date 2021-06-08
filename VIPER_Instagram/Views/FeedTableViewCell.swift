@@ -4,12 +4,11 @@
 //
 //  Created by macbookp on 14.05.2021.
 //
-
-import UIKit
 import SnapKit
+import UIKit
+
 class FeedTableViewCell: UITableViewCell {
 
-    // MARK: CreateViews
     private let topView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -69,7 +68,6 @@ class FeedTableViewCell: UITableViewCell {
         stack.addArrangedSubview(likeButton)
         stack.addArrangedSubview(messegeButton)
         stack.addArrangedSubview(directButton)
-    
         return stack
     }()
     
@@ -95,17 +93,13 @@ class FeedTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    override func prepareForReuse() {
-//        super.prepareForReuse()
-//        photoImage.image = nil
-//    }
-    
-    func setNewImage(image: UIImage) {
-        self.photoImage.image = image
+    func configure(post: Post) {
+        self.photoImage.image = post.image
     }
     
    private func initialize() {
-        //TOPVIEW
+    
+        //MARK: TOPVIEW
         addSubview(topView)
         topView.snp.makeConstraints { maker in
             maker.left.top.right.equalToSuperview()
@@ -131,7 +125,7 @@ class FeedTableViewCell: UITableViewCell {
             maker.height.width.equalTo(25)
         }
 
-        //PHOTOIMAGE
+        //MARK: PHOTOIMAGE
         addSubview(photoImage)
         photoImage.snp.makeConstraints { maker in
             maker.top.equalTo(topView.snp.bottom)
@@ -139,7 +133,7 @@ class FeedTableViewCell: UITableViewCell {
             maker.left.right.equalToSuperview()
         }
 
-        //BottomView
+        //MARK: BottomView
         addSubview(bottomView)
         bottomView.snp.makeConstraints { maker in
             maker.top.equalTo(photoImage.snp.bottom)

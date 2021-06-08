@@ -8,13 +8,9 @@
 import UIKit
 
 class TabBarModuleBuilder {
-    
     static func build(submodules: TabBarRouter.Submodules) -> UITabBarController {
-        
         let tabs = TabBarRouter.tabs(submodules: submodules)
-        let viewController = TabBarViewController(tabs: tabs)
-        
-        return viewController
-        
+        let tabBarController = TabBarViewController(tabs: tabs)
+        return tabBarController
     }
 }

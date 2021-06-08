@@ -46,7 +46,7 @@ class FeeedManager {
                 print("Posts in COMLETION BLOCK IN GETDOGS = \(posts.count)")
             }
         }
-    
+        
     }
     
     // Проверка на наличие интернета
@@ -59,5 +59,5 @@ class FeeedManager {
     //            //dbManager.getDog()
     //        }
     //    }
-        
+    
 }

@@ -12,7 +12,6 @@ extension UIImage {
     static var logo: UIImage { UIImage(named: "logo")! }
     
     // MARK: Feed Images
-    
     static var direct: UIImage { UIImage(named: "DirectFeed")! }
     static var user: UIImage { UIImage(named: "userFeed")! }
     static var like: UIImage { UIImage(named: "LikeFeed")! }
@@ -31,8 +30,6 @@ extension UIImage {
     static var feedProfile: UIImage { UIImage(named: "feedProfile")! }
     static var taggedPhotoProfile: UIImage { UIImage(named: "taggedPhotoProfile")! }
 
-    
-    
     // MARK: Tabs
     static var feedTab: UIImage { UIImage(named: "feedTabImage")!}
     static var searchTab: UIImage { UIImage(named: "searchTabImage")!}
@@ -40,7 +37,5 @@ extension UIImage {
     static var likesTab: UIImage { UIImage(named: "likesTabImage")!}
     static var profileTab: UIImage { UIImage(named: "profileTabImage")!}
     static var profileNoSelectionTab: UIImage { UIImage(named: "userNoSelectionTabImage")!}
-    
-    
     
 }

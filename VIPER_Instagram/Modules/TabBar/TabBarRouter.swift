@@ -21,6 +21,7 @@ class TabBarRouter {
     }
 }
 
+
 extension TabBarRouter {
     
     static func tabs(submodules: Submodules) -> InstagramTabs {

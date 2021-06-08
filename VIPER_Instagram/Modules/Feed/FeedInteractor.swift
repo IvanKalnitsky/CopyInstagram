@@ -13,7 +13,7 @@ class FeedInteractor: FeedInteractorProtocol {
     
     func getPosts() {
         FeeedManager.shared.getDogs { posts in
-                self.presenter?.fetchPhotos(posts: posts)
+                self.presenter?.fetchPosts(posts: posts)
             print("posts in GET POSTS INTERACTOR = \(posts.count)")
         }
     }
