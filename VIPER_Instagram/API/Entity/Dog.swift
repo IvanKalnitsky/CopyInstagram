@@ -9,7 +9,6 @@ import Foundation
 
 import UIKit
 
-
 // MARK: - Dog
 struct Dog: Codable {
     let message: String

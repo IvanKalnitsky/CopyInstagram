@@ -37,5 +37,4 @@ extension UIImage {
     static var likesTab: UIImage { UIImage(named: "likesTabImage")!}
     static var profileTab: UIImage { UIImage(named: "profileTabImage")!}
     static var profileNoSelectionTab: UIImage { UIImage(named: "userNoSelectionTabImage")!}
-    
 }

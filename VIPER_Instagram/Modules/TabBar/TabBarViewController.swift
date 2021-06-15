@@ -17,7 +17,6 @@ class TabBarViewController: UITabBarController {
     init(tabs: InstagramTabs) {
         super.init(nibName: nil, bundle: nil)
         viewControllers = [tabs.feed, tabs.profile]
-        
     }
     
     required init?(coder: NSCoder) {

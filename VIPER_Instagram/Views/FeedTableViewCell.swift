@@ -99,7 +99,7 @@ class FeedTableViewCell: UITableViewCell {
     
    private func initialize() {
     
-        //MARK: TOPVIEW
+        //MARK: - TOPVIEW CONSTRAINTS
         addSubview(topView)
         topView.snp.makeConstraints { maker in
             maker.left.top.right.equalToSuperview()
@@ -125,7 +125,7 @@ class FeedTableViewCell: UITableViewCell {
             maker.height.width.equalTo(25)
         }
 
-        //MARK: PHOTOIMAGE
+        //MARK: - PHOTOIMAGE CONSTRAINTS
         addSubview(photoImage)
         photoImage.snp.makeConstraints { maker in
             maker.top.equalTo(topView.snp.bottom)
@@ -133,7 +133,7 @@ class FeedTableViewCell: UITableViewCell {
             maker.left.right.equalToSuperview()
         }
 
-        //MARK: BottomView
+        //MARK: - BottomView CONSTRAINTS
         addSubview(bottomView)
         bottomView.snp.makeConstraints { maker in
             maker.top.equalTo(photoImage.snp.bottom)
@@ -162,5 +162,4 @@ class FeedTableViewCell: UITableViewCell {
             maker.top.equalTo(lmdStackView.snp.bottom).inset(-10)
         }
     }
-   
 }

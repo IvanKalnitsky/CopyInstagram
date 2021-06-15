@@ -9,18 +9,18 @@ protocol FeedViewProtocol: AnyObject {
 
 class FeedViewController: UIViewController, FeedViewProtocol {
     
+    let presenter: FeedPresenterProtocol
+  
+    // MARK: -  PrivateProperties
+    private var feedTableView = UITableView()
+    private let defaultFhoto = UIImage(named: "default")
+    private var targetCellNumber = 7
+    
     private var posts = [Post]() {
         didSet {
             feedTableView.reloadData()
         }
     }
-    
-    private let defaultFhoto = UIImage(named: "default")
-    
-    private var targetCellNumber = 7
-    
-    //MARK: CreateViews
-    private var feedTableView = UITableView()
     
     private var topView: UIView = {
         let view = UIView()
@@ -42,8 +42,7 @@ class FeedViewController: UIViewController, FeedViewProtocol {
         return button
     }()
     
-    let presenter: FeedPresenterProtocol
-    
+    // MARK: - Init
     init(presenter: FeedPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -53,7 +52,6 @@ class FeedViewController: UIViewController, FeedViewProtocol {
         fatalError("don't use storyboards!")
     }
     
-    //MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.needPosts()
@@ -62,8 +60,8 @@ class FeedViewController: UIViewController, FeedViewProtocol {
     
     private func initialize() {
         self.view.backgroundColor = .white
-        //MARK: - SetupTopView
         
+        //MARK: - MakeConstraints
         self.view.addSubview(topView)
         topView.snp.makeConstraints { maker in
             maker.left.top.right.equalToSuperview()
@@ -85,7 +83,6 @@ class FeedViewController: UIViewController, FeedViewProtocol {
             maker.bottom.equalToSuperview().inset(15)
         }
         
-        //MARK: - SetupTableView
         self.view.addSubview(feedTableView)
         feedTableView.snp.makeConstraints { maker in
             maker.top.equalTo(topView.snp.bottom)
@@ -101,10 +98,9 @@ class FeedViewController: UIViewController, FeedViewProtocol {
     func showDownloadedPosts(posts: [Post]) {
         self.posts += posts
     }
-    
 }
 
-//MARK: TableView
+//MARK: - TableViewDelegate&DataSource
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

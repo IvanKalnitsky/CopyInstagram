@@ -5,9 +5,10 @@ import SnapKit
 import AVFoundation
 
 protocol ProfileViewProtocol: AnyObject {
+    
 }
 
-class ProfileViewController: UIViewController, ProfileViewProtocol {
+class ProfileViewController: UIViewController, ProfileViewProtocol{
 
     let presenter: ProfilePresenterProtocol
     init(presenter: ProfilePresenterProtocol) {
@@ -81,5 +82,21 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
                 maker.width.equalTo(50)
             }
         }
+        let profileInfoView = ProfileInfoView(delegate: self)
+        view.addSubview(profileInfoView)
+        profileInfoView.snp.makeConstraints { maker in
+            maker.centerX.centerY.equalToSuperview()
+            maker.leading.trailing.equalToSuperview()
+            maker.height.equalTo(100)
+        }
     }
+}
+
+
+extension ProfileViewController: ProfileInfoProtocol {
+    
+    func didProfileButtonTapped() {
+        print("Button tapped")
+    }
+
 }
